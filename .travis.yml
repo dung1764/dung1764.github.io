@@ -20,4 +20,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/dung1764
   on:
-    branch: develop
+    branch: master
