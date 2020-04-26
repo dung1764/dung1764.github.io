@@ -12,14 +12,8 @@ script:
   - ng lint
   - npm run test-headless
 
-build:
-  script: ng build --prod
-  branches:
-    only:
-    - develop
-
-# before_deploy:
-#   - ng build --prod
+before_deploy:
+  - ng build --prod
 deploy:
   provider: pages
   skip_cleanup: true
