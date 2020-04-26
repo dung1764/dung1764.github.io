@@ -5,21 +5,12 @@ language: node_js
 node_js:
   - "10"
 cache: npm
+
 before_script:
   - npm install -g @angular/cli
-
-lint:
-  script: ng lint
-  branches:
-    except:
-    - master
-    - develop
-
-test:
-  script: ng test --watch=false --browsers=ChromeHeadless
-  branches:
-    except:
-    - master
+script:
+  - ng lint
+  - npm run test-headless
 
 build:
   script: ng build --prod
