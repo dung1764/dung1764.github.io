@@ -25,6 +25,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/dung1764.github.io
+  local_dir: dist/dung1764
   on:
     branch: master
