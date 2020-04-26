@@ -4,7 +4,7 @@ sudo: false
 language: node_js
 node_js:
   - "10"
-cache: npm
+# cache: npm
 
 before_script:
   - npm install -g @angular/cli
@@ -12,15 +12,8 @@ script:
   - ng lint
   - npm run test-headless
 
-build:
-  script: ng build --prod
-  branches:
-    only:
-    - develop
-    - master
-
-# before_deploy:
-#   - ng build --prod
+before_deploy:
+  - ng build --prod
 deploy:
   provider: pages
   skip_cleanup: true
