@@ -4,7 +4,7 @@ sudo: false
 language: node_js
 node_js:
   - "10"
-cache: npm
+# cache: npm
 
 before_script:
   - npm install -g @angular/cli
@@ -17,7 +17,6 @@ build:
   branches:
     only:
     - develop
-    - master
 
 # before_deploy:
 #   - ng build --prod
@@ -27,4 +26,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/dung1764
   on:
-    branch: master
+    branch: develop
