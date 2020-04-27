@@ -13,7 +13,7 @@ script:
   - npm run test-headless
 
 before_deploy:
-  - ng build --prod --base-href https://dung1764.github.io/
+  - ng build --prod
 deploy:
   provider: pages
   skip_cleanup: true
